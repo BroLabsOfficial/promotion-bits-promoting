@@ -8,7 +8,7 @@ from googletrans import Translator
 from selenium.webdriver.common.by import By
 from telethon.tl.functions.channels import GetFullChannelRequest
 
-from telethon_sign_in import TelethonSignIn
+from telega_scraper.telethon_sign_in import TelethonSignIn
 
 END_URL = 'https://telega.io/catalog?filter%5Bchannel_theme_id%5D=42%2C32%2C16%2C20%2C18&filter%5Bentity_lang%5D=1&filter%5Bviews%5D%5Bmin%5D=100&filter%5Bviews%5D%5Bmax%5D=1000&order%5Bsort%5D=apr&order%5Btype%5D=DESC'
 API_ID = 1578213
@@ -52,11 +52,6 @@ def get_channels(url):
         else:
             time.sleep(1)
             continue
-
-    # r = requests.get(url)
-    # if r.ok:
-    #     bs = BeautifulSoup(r.text, 'html.parser')
-
 
 def main():
     print('Script started!')
